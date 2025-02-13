@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,11 +8,10 @@
   <ItemGroup>
     <Compile Include="Program.fs" />
     <Compile Include="Output.fs" />
-  	<Compile Include="linear.fs" />
-  	<Compile Include="lagrange.fs" />
-  	<Compile Include="ProcessInput.fs" />
-  	<Compile Include="InputHandler.fs" />
-
+    <Compile Include="linear.fs" />
+    <Compile Include="lagrange.fs" />
+    <Compile Include="ProcessInput.fs" />
+    <Compile Include="InputHandler.fs" />
   </ItemGroup>
 
 </Project>
