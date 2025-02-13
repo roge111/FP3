@@ -2,7 +2,7 @@ module ProcessInput
 
 open Linear
 open Lagrange
-open Output
+open OutputHandler
 
 let processPoints (points: (float * float) list) (startPoints: (float * float) option * (float * float) option) useLinear useLagrange samplingRate =
     let interpolateLinear () =
