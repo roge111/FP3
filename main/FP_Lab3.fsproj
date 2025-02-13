@@ -12,8 +12,8 @@
     <Compile Include="lagrange.fs" />
     <Compile Include="ProcessInput.fs" />
     <Compile Include="InputHandler.fs" />
-    <Compile Include="Program.fs" />
     <Compile Include="Tests.fs" />
+    <Compile Include="Program.fs" />
   </ItemGroup>
 
    <ItemGroup>
