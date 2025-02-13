@@ -8,9 +8,11 @@ open ProcessInput
 
 [<EntryPoint>]
 let main argv =
+    // Получаем флаги для линейной и лагранжевой интерполяции
     let useLinear = argv |> Array.contains "linear"
     let useLagrange = argv |> Array.contains "lagrange"
 
+    // Получаем значение samplingRate
     let samplingRate =
         argv
         |> Array.tryFind (fun arg -> arg.StartsWith("rate="))
@@ -20,5 +22,7 @@ let main argv =
             | _ -> None)
         |> Option.defaultValue 1.0
 
-    readPoints processPoints useLinear useLagrange samplingRate
+    // Вызов readPoints с правильными логическими значениями и samplingRate
+    readPoints useLinear useLagrange samplingRate
+
     0
