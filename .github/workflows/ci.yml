@@ -38,4 +38,9 @@ jobs:
           dotnet tool install -g fantomas-tool
           echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
           fantomas ./main/*.fs 
+      - name: Tests
+        run: |
+            dotnet restore test_lab3/main
+            dotnet build ./main
+            dotnet test ./main
 
