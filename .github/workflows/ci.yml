@@ -40,7 +40,7 @@ jobs:
           fantomas ./main/*.fs 
       - name: Tests
         run: |
-            dotnet restore test_lab3/main
+            dotnet restore ./main
             dotnet build ./main
             dotnet test ./main
 
