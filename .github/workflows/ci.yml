@@ -1,10 +1,10 @@
 on:
   push:
     branches:
-      - main
+      - Interpolation
   pull_request:
     branches:
-      - main
+      - Interpolation
       
 jobs:
   build:
@@ -23,7 +23,7 @@ jobs:
         run: dotnet restore Interpolation/Interpolation.fsproj
 
       - name: Build project
-        run: dotnet build ./main
+        run: dotnet build ./Interpolation
 
       - name: Set DOTNET_ROLL_FORWARD
         run: echo "DOTNET_ROLL_FORWARD=latestMajor" >> $GITHUB_ENV
@@ -31,13 +31,13 @@ jobs:
         run: |
           dotnet tool install -g dotnet-fsharplint
           echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
-          dotnet fsharplint lint ./main
+          dotnet fsharplint lint ./Interpolation
 
       - name: Formatter
         run: |
           dotnet tool install -g fantomas-tool
           echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
-          fantomas ./main/*.fs 
+          fantomas ./Interpolation/*.fs 
       - name: Tests
         run: |
             dotnet restore ./Interpolation
