@@ -20,7 +20,7 @@ jobs:
           dotnet-version: '9.0.x'
           
       - name: Restore dependencies
-        run: dotnet restore main/Interpolation.fsproj
+        run: dotnet restore Interpolation/Interpolation.fsproj
 
       - name: Build project
         run: dotnet build ./main
