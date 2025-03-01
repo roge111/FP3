@@ -4,7 +4,7 @@ on:
       - Interpolation
   pull_request:
     branches:
-      - Interpolation
+      - main
       
 jobs:
   build:
